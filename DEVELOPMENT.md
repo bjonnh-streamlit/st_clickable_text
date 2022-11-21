@@ -19,7 +19,8 @@ $ yarn watch
 # Publish
 Set the new version.
 ```shell
-$ yarn lerna version <version>
+$ docker build -t build_clickable .
+$ docker run -it --rm --user $(id -u) -v ~/.ssh/id_rsa_gh_streamlit.pub:/home/node/.ssh/id_rsa_gh_streamlit.pub:ro -v ~/.ssh/id_rsa_gh_streamlit:/home/node/.ssh/id_rsa_gh_streamlit:ro -v ~/.ssh/config:/home/node/.ssh/config:ro -v $PWD:/srv/app build_clickable bash -c "yarn install; yarn lerna version <version>"
 ```
 `major`, `minor`, or `patch` can be used as `<version>`.
 

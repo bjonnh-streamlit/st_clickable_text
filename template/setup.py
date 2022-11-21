@@ -3,8 +3,8 @@ import setuptools
 setuptools.setup(
     name="st_clickable_text",
     version="0.0.1",
-    author="",
-    author_email="",
+    author="Jonathan Bisson",
+    author_email="bjonnh-streamlit@bjonnh.net",
     description="",
     long_description="",
     long_description_content_type="text/plain",
